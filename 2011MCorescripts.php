@@ -1,4 +1,4 @@
---- ATTENTION!!! There are site-specific ids at the end of this script!!!!!!!!!!!!!!!!!!!!
+--- These corescripts were taken from Novetus! All credits go to the people that patched the scripts.
 
 delay(0, function()
 
