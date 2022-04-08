@@ -15,3 +15,20 @@ end
 end 
 end 
 game.Players.PlayerAdded:connect(onJoined) 
+
+function onChatted(msg, speaker)
+    
+    source = string.lower(speaker.Name)
+    msg = string.lower(msg)
+    -- Note: This one is NOT caps sensitive
+
+    if msg == ";ec" then
+        speaker.Character.Humanoid.Health = 0
+    end
+end
+
+function onPlayerEntered(newPlayer)
+        newPlayer.Chatted:connect(function(msg) onChatted(msg, newPlayer) end) 
+end
+ 
+game.Players.ChildAdded:connect(onPlayerEntered)
